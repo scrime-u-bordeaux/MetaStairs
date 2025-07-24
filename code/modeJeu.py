@@ -49,6 +49,6 @@ try:
         if idx > len(modes):
             idx = 1
 except KeyboardInterrupt:
-    print("Arret manuel.")
+    print("\nArret manuel.")
 finally:
     print("Fin de l'interaction")
