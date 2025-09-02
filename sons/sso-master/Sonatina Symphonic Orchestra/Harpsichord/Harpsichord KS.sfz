@@ -1,0 +1,26 @@
+<global>
+sw_default=100
+sw_lokey=96
+sw_hikey=100
+sw_last=96
+sw_label=4'
+
+#include "Harpsichord 4'.sfz"
+
+<global>
+sw_default=100
+sw_lokey=96
+sw_hikey=100
+sw_last=98
+sw_label=8'
+
+#include "Harpsichord 8'.sfz"
+
+<global>
+sw_default=100
+sw_lokey=96
+sw_hikey=100
+sw_last=100
+sw_label=Full
+
+#include "Harpsichord Full.sfz"

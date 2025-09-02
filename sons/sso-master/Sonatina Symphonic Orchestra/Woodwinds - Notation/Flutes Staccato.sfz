@@ -1,0 +1,28 @@
+// ------------------------------
+//  Sonatina Symphonic Orchestra
+// ------------------------------
+//        Flutes Staccato
+// ------------------------------
+
+<control>
+
+<group>
+loop_mode=one_shot
+seq_position=1
+seq_length=2
+ampeg_sustain=0
+ampeg_decay=1
+ampeg_vel2decay=10
+
+#include "includes/flutes-staccato-rr1.sfz"
+
+<group>
+loop_mode=one_shot
+transpose=-1
+seq_position=2
+seq_length=2
+ampeg_sustain=0
+ampeg_decay=1
+ampeg_vel2decay=10
+
+#include "includes/flutes-staccato-rr2.sfz"

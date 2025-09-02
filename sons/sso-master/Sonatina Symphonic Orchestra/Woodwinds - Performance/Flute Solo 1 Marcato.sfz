@@ -1,0 +1,36 @@
+// ------------------------------
+//  Sonatina Symphonic Orchestra
+// ------------------------------
+//         Flute Marcato
+// ------------------------------
+
+<control>
+label_cc1=Dynamics
+set_cc1=96
+
+// -------
+// Sustain
+// -------
+
+<group>
+ampeg_release=0.425
+amp_veltrack=0
+group_volume=-29
+gain_cc1=29
+fil_keytrack=80
+fil_keycenter=c4
+fil_type=lpf_1p
+cutoff=500
+cutoff_cc1=4800
+
+#include "includes/flute-solo-1-sustain.sfz"
+
+// --------
+// Staccato
+// --------
+
+#define $RELEASE_AMPLITUDE 0
+#define $GROUP_VOLUME -16
+#define $GAIN_CC1 20
+
+#include "includes/flute-solo-1-staccato.sfz"

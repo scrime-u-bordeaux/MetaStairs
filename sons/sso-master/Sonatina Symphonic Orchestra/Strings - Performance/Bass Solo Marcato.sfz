@@ -1,0 +1,64 @@
+// ------------------------------
+//  Sonatina Symphonic Orchestra
+// ------------------------------
+//         Bass Marcato
+// ------------------------------
+
+<control>
+label_cc1=Dynamics
+set_cc1=96
+label_cc21=Vibrato
+set_cc21=64
+
+// -------
+// Sustain
+// -------
+
+<group>
+loop_mode=loop_continuous
+ampeg_attack=0.8
+ampeg_vel2attack=-0.8
+ampeg_release=1
+amp_veltrack=0
+group_volume=-29
+gain_cc1=29
+fil_type=lpf_1p
+cutoff=1500
+cutoff_cc1=4800
+fil_keycenter=a3
+fil_keytrack=100
+
+#define $VIB_PITCH 35
+#define $VIB_VOLUME 1
+#define $VIB_DELAY 0.5
+#include "includes/vibrato.sfz"
+#include "includes/bass-solo-sustain.sfz"
+
+
+// --------
+// Staccato
+// --------
+
+<group>
+loop_mode=one_shot
+offset=30000
+offset_random=10000
+ampeg_attack=0.02
+ampeg_hold=0.05
+ampeg_sustain=0
+ampeg_decay=0.6
+group_volume=-18
+gain_cc1=20
+
+#include "includes/bass-solo-sustain.sfz"
+
+<group>
+loop_mode=one_shot
+ampeg_attack=0
+ampeg_hold=0.1
+ampeg_sustain=0
+ampeg_decay=0.2
+group_volume=-16
+gain_cc1=20
+
+#include "includes/bass-solo-sustain.sfz"

@@ -1,0 +1,63 @@
+<global>
+sw_default=c2
+sw_lokey=c2
+sw_hikey=f#2
+sw_last=c2
+sw_label=Sustain
+
+#include "Flute Solo 2 Sustain.sfz"
+
+<global>
+sw_default=c2
+sw_lokey=c2
+sw_hikey=f#2
+sw_last=c#2
+sw_label=Sustain Non-Vibrato
+
+#include "Flute Solo 2 Sustain Non-Vibrato.sfz"
+
+<global>
+sw_default=c2
+sw_lokey=c2
+sw_hikey=f#2
+sw_last=d2
+sw_label=Legato
+
+#include "Flute Solo 2 Legato.sfz"
+
+<global>
+sw_default=c2
+sw_lokey=c2
+sw_hikey=f#2
+sw_last=d#2
+sw_label=Legato Non-Vibrato
+
+#include "Flute Solo 2 Legato Non-Vibrato.sfz"
+
+<global>
+sw_default=c2
+sw_lokey=c2
+sw_hikey=f#2
+sw_last=e2
+sw_label=Marcato
+
+#include "Flute Solo 2 Marcato.sfz"
+
+<global>
+sw_default=c2
+sw_lokey=c2
+sw_hikey=f#2
+sw_last=f2
+sw_label=Marcato Non-Vibrato
+
+#include "Flute Solo 2 Marcato Non-Vibrato.sfz"
+
+<global>
+sw_default=c2
+sw_lokey=c2
+sw_hikey=f#2
+sw_last=f#2
+sw_label=Staccato
+
+#include "Flute Solo 2 Staccato.sfz"
+

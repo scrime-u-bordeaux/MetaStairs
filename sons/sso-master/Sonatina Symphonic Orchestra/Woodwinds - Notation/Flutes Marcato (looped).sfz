@@ -1,0 +1,58 @@
+// ------------------------------
+//  Sonatina Symphonic Orchestra
+// ------------------------------
+//        Flutes Marcato
+// ------------------------------
+
+
+<control>
+label_cc1=Marcato Attack
+set_cc1=0
+
+// -------
+// Sustain
+// -------
+
+<group>
+loop_mode=loop_continuous
+ampeg_attack=0.640
+ampeg_vel2attack=-0.640
+ampeg_release=0.910
+ampeg_hold=1.0
+ampeg_decay=25
+ampeg_sustain=35
+fil_veltrack=7000
+fil_keytrack=80
+fil_keycenter=c4
+fil_type=lpf_2p
+cutoff=500
+
+#include "includes/flutes-sustain-looped.sfz"
+
+
+// --------
+// Staccato
+// --------
+
+<group>
+loop_mode=one_shot
+seq_position=1
+seq_length=2
+ampeg_sustain=0
+ampeg_decay=1
+ampeg_vel2decay=10
+gain_cc1=-12
+
+#include "includes/flutes-staccato-rr1.sfz"
+
+<group>
+loop_mode=one_shot
+transpose=-1
+seq_position=2
+seq_length=2
+ampeg_sustain=0
+ampeg_decay=1
+ampeg_vel2decay=10
+gain_cc1=-12
+
+#include "includes/flutes-staccato-rr2.sfz"

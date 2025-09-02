@@ -1,0 +1,80 @@
+<global>
+sw_default=c2
+sw_lokey=c2
+sw_hikey=a2
+sw_last=c2
+sw_label=Sustain (non-looped)
+
+#include "Violin Solo 1 Sustain.sfz"
+
+<global>
+sw_default=c2
+sw_lokey=c2
+sw_hikey=a2
+sw_last=c#2
+sw_label=Sustain (looped)
+
+#include "Violin Solo 1 Sustain (looped).sfz"
+
+<global>
+sw_default=c2
+sw_lokey=c2
+sw_hikey=a2
+sw_last=d2
+sw_label=Legato
+
+#include "Violin Solo 1 Legato.sfz"
+
+<global>
+sw_default=c2
+sw_lokey=c2
+sw_hikey=a2
+sw_last=d#2
+sw_label=Marcato (non-looped)
+
+#include "Violin Solo 1 Marcato.sfz"
+
+<global>
+sw_default=c2
+sw_lokey=c2
+sw_hikey=a2
+sw_last=e2
+sw_label=Marcato (looped)
+
+#include "Violin Solo 1 Marcato (looped).sfz"
+
+<global>
+sw_default=c2
+sw_lokey=c2
+sw_hikey=a2
+sw_last=f2
+sw_label=Spiccato
+
+#include "Violin Solo 1 Spiccato.sfz"
+
+<global>
+sw_default=c2
+sw_lokey=c2
+sw_hikey=a2
+sw_last=f#2
+sw_label=Staccato
+
+#include "Violin Solo 1 Staccato.sfz"
+
+<global>
+sw_default=c2
+sw_lokey=c2
+sw_hikey=a2
+sw_last=g2
+sw_label=Pizzicato
+
+#include "Violin Solo 1 Pizzicato.sfz"
+
+<global>
+sw_default=c2
+sw_lokey=c2
+sw_hikey=a2
+sw_last=a2
+sw_label=Harmonics
+
+#include "Violin Solo 1 Harmonics.sfz"

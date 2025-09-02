@@ -1,0 +1,36 @@
+<global>
+sw_default=c6
+sw_lokey=c6
+sw_hikey=f6
+sw_last=c6
+sw_label=Sustain
+
+#include "Horns Sustain.sfz"
+
+<global>
+sw_default=c6
+sw_lokey=c6
+sw_hikey=f6
+sw_last=d6
+sw_label=Marcato
+
+#include "Horns Marcato.sfz"
+
+<global>
+sw_default=c6
+sw_lokey=c6
+sw_hikey=f6
+sw_last=e6
+sw_label=Staccato
+
+#include "Horns Staccato.sfz"
+
+<global>
+sw_default=c6
+sw_lokey=c6
+sw_hikey=f6
+sw_last=f6
+sw_label=Legato
+
+#include "Horns Legato.sfz"
+

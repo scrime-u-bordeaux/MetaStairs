@@ -1,0 +1,45 @@
+<global>
+sw_default=c2
+sw_lokey=c2
+sw_hikey=e2
+sw_last=c2
+sw_label=Sustain (non-looped)
+
+#include "Oboe Solo Sustain.sfz"
+
+<global>
+sw_default=c2
+sw_lokey=c2
+sw_hikey=e2
+sw_last=c#2
+sw_label=Sustain (looped)
+
+#include "Oboe Solo Sustain (looped).sfz"
+
+<global>
+sw_default=c2
+sw_lokey=c2
+sw_hikey=e2
+sw_last=d2
+sw_label=Sustain (looped, decay)
+
+#include "Oboe Solo Sustain (looped, decay).sfz"
+
+<global>
+sw_default=c2
+sw_lokey=c2
+sw_hikey=e2
+sw_last=d#2
+sw_label=Staccato
+
+#include "Oboe Solo Staccato.sfz"
+
+<global>
+sw_default=c2
+sw_lokey=c2
+sw_hikey=e2
+sw_last=e2
+sw_label=Legato
+
+#include "Oboe Solo Legato.sfz"
+

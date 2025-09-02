@@ -1,0 +1,72 @@
+<global>
+sw_default=c2
+sw_lokey=c2
+sw_hikey=a2
+sw_last=c2
+sw_label=Sustain
+
+#include "1st Violins Sustain.sfz"
+
+<global>
+sw_default=c2
+sw_lokey=c2
+sw_hikey=a2
+sw_last=c#2
+sw_label=Legato
+
+#include "1st Violins Legato.sfz"
+
+<global>
+sw_default=c2
+sw_lokey=c2
+sw_hikey=a2
+sw_last=d2
+sw_label=Marcato
+
+#include "1st Violins Marcato.sfz"
+
+<global>
+sw_default=c2
+sw_lokey=c2
+sw_hikey=a2
+sw_last=e2
+sw_label=Staccato
+
+#include "1st Violins Staccato.sfz"
+
+<global>
+sw_default=c2
+sw_lokey=c2
+sw_hikey=a2
+sw_last=f2
+sw_label=Pizzicato
+
+#include "1st Violins Pizzicato.sfz"
+
+<global>
+sw_default=c2
+sw_lokey=c2
+sw_hikey=a2
+sw_last=f#2
+sw_label=Col Legno
+
+#include "1st Violins Col Legno.sfz"
+
+<global>
+sw_default=c2
+sw_lokey=c2
+sw_hikey=a2
+sw_last=g2
+sw_label=Tremolo
+
+#include "1st Violins Tremolo.sfz"
+
+<global>
+sw_default=c2
+sw_lokey=c2
+sw_hikey=a2
+sw_last=a2
+sw_label=Harmonics
+
+#include "1st Violins Harmonics.sfz"
+

@@ -1,0 +1,54 @@
+<global>
+sw_default=c6
+sw_lokey=c6
+sw_hikey=f6
+sw_last=c6
+sw_label=Sustain (looped)
+
+#include "Trombones Sustain (looped).sfz"
+
+<global>
+sw_default=c6
+sw_lokey=c6
+sw_hikey=f6
+sw_last=c#6
+sw_label=Sustain (non-looped)
+
+#include "Trombones Sustain.sfz"
+
+<global>
+sw_default=c6
+sw_lokey=c6
+sw_hikey=f6
+sw_last=d6
+sw_label=Marcato (looped)
+
+#include "Trombones Marcato (looped).sfz"
+
+<global>
+sw_default=c6
+sw_lokey=c6
+sw_hikey=f6
+sw_last=d#6
+sw_label=Marcato (non-looped)
+
+#include "Trombones Marcato.sfz"
+
+<global>
+sw_default=c6
+sw_lokey=c6
+sw_hikey=f6
+sw_last=e6
+sw_label=Staccato
+
+#include "Trombones Staccato.sfz"
+
+<global>
+sw_default=c6
+sw_lokey=c6
+sw_hikey=f6
+sw_last=f6
+sw_label=Legato
+
+#include "Trombones Legato.sfz"
+

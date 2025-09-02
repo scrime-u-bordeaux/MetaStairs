@@ -1,0 +1,26 @@
+// ------------------------------
+//  Sonatina Symphonic Orchestra
+// ------------------------------
+//            Flute
+// ------------------------------
+
+
+<control>
+
+<group>
+loop_mode=loop_continuous
+ampeg_hold=3.1416
+ampeg_decay=32.3607
+ampeg_sustain=16.18
+amplfo_delay=1.618
+amplfo_fade=0.618
+amplfo_freq=0.3142
+amplfo_depth=1.5708
+ampeg_release=0.425
+fil_keytrack=80
+fil_keycenter=c4
+fil_type=lpf_1p
+cutoff=500
+fil_veltrack=4800
+
+#include "includes/flute-solo-1-looped.sfz"

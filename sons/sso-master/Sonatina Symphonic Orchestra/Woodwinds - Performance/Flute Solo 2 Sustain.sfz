@@ -1,0 +1,29 @@
+// ------------------------------
+//  Sonatina Symphonic Orchestra
+// ------------------------------
+//            Flute 2
+// ------------------------------
+
+<control>
+label_cc1=Dynamics
+set_cc1=96
+
+<group>
+ampeg_release=0.4
+xfin_locc1=70
+xfin_hicc1=80
+amp_veltrack=0
+group_volume=-30
+gain_cc1=30
+
+#include "includes/flute-solo-2-sustain-ff.sfz"
+
+<group>
+ampeg_release=0.4
+xfout_locc1=70
+xfout_hicc1=80
+amp_veltrack=0
+group_volume=-30
+gain_cc1=30
+
+#include "includes/flute-solo-2-sustain-mf.sfz"

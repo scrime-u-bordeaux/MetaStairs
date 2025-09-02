@@ -1,0 +1,60 @@
+// ------------------------------
+//  Sonatina Symphonic Orchestra
+// ------------------------------
+//         Basses Legato
+// ------------------------------
+
+<control>
+label_cc1=Dynamics
+set_cc1=96
+label_cc21=Vibrato
+set_cc21=0
+
+<group>
+ampeg_attack=0.30
+ampeg_vel2attack=-0.300
+ampeg_release=1.25
+amp_veltrack=0
+group_volume=-29
+gain_cc1=29
+fil_type=lpf_1p
+cutoff=1500
+cutoff_cc1=4800
+fil_keycenter=a3
+fil_keytrack=100
+group=1
+off_by=1
+off_mode=time
+off_time=1
+trigger=first
+offset=20000
+
+#define $VIB_PITCH 20
+#define $VIB_VOLUME 0
+#define $VIB_DELAY 0
+#include "includes/vibrato.sfz"
+#include "includes/basses-sustain.sfz"
+
+<group>
+ampeg_attack=0.2
+ampeg_release=1.25
+amp_veltrack=0
+group_volume=-29
+gain_cc1=29
+fil_type=lpf_1p
+cutoff=1500
+cutoff_cc1=4800
+fil_keycenter=a3
+fil_keytrack=100
+group=1
+off_by=1
+off_mode=time
+off_time=1
+trigger=legato
+offset=30000
+
+#define $VIB_PITCH 20
+#define $VIB_VOLUME 0
+#define $VIB_DELAY 0
+#include "includes/vibrato.sfz"
+#include "includes/basses-sustain.sfz"

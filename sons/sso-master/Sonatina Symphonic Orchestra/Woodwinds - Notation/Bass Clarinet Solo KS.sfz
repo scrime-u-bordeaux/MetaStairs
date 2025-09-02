@@ -1,0 +1,45 @@
+<global>
+sw_default=c6
+sw_lokey=c6
+sw_hikey=e6
+sw_last=c6
+sw_label=Sustain (non-looped)
+
+#include "Bass Clarinet Solo Sustain.sfz"
+
+<global>
+sw_default=c6
+sw_lokey=c6
+sw_hikey=e6
+sw_last=c#6
+sw_label=Sustain (looped)
+
+#include "Bass Clarinet Solo Sustain (looped).sfz"
+
+<global>
+sw_default=c6
+sw_lokey=c6
+sw_hikey=e6
+sw_last=d6
+sw_label=Sustain (looped, decay)
+
+#include "Bass Clarinet Solo Sustain (looped, decay).sfz"
+
+<global>
+sw_default=c6
+sw_lokey=c6
+sw_hikey=e6
+sw_last=d#6
+sw_label=Staccato
+
+#include "Bass Clarinet Solo Staccato.sfz"
+
+<global>
+sw_default=c6
+sw_lokey=c6
+sw_hikey=e6
+sw_last=e6
+sw_label=Legato
+
+#include "Bass Clarinet Solo Legato.sfz"
+

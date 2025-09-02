@@ -1,0 +1,53 @@
+<global>
+sw_default=c2
+sw_lokey=c2
+sw_hikey=g2
+sw_last=c2
+sw_label=Sustain
+
+#include "Viola Solo Sustain.sfz"
+
+<global>
+sw_default=c2
+sw_lokey=c2
+sw_hikey=g2
+sw_last=c#2
+sw_label=Legato
+
+#include "Viola Solo Legato.sfz"
+
+<global>
+sw_default=c2
+sw_lokey=c2
+sw_hikey=g2
+sw_last=d2
+sw_label=Marcato
+
+#include "Viola Solo Marcato.sfz"
+
+<global>
+sw_default=c2
+sw_lokey=c2
+sw_hikey=g2
+sw_last=e2
+sw_label=Staccato
+
+#include "Viola Solo Staccato.sfz"
+
+<global>
+sw_default=c2
+sw_lokey=c2
+sw_hikey=g2
+sw_last=f2
+sw_label=Pizzicato
+
+#include "Viola Solo Pizzicato.sfz"
+
+<global>
+sw_default=c2
+sw_lokey=c2
+sw_hikey=g2
+sw_last=g2
+sw_label=Harmonics
+
+#include "Viola Solo Harmonics.sfz"

@@ -1,0 +1,53 @@
+<global>
+sw_default=c6
+sw_lokey=c6
+sw_hikey=g6
+sw_last=c6
+sw_label=Sustain
+
+#include "Bass Solo Sustain.sfz"
+
+<global>
+sw_default=c6
+sw_lokey=c6
+sw_hikey=g6
+sw_last=c#6
+sw_label=Legato
+
+#include "Bass Solo Legato.sfz"
+
+<global>
+sw_default=c6
+sw_lokey=c6
+sw_hikey=g6
+sw_last=d6
+sw_label=Marcato
+
+#include "Bass Solo Marcato.sfz"
+
+<global>
+sw_default=c6
+sw_lokey=c6
+sw_hikey=g6
+sw_last=e6
+sw_label=Staccato
+
+#include "Bass Solo Staccato.sfz"
+
+<global>
+sw_default=c6
+sw_lokey=c6
+sw_hikey=g6
+sw_last=f6
+sw_label=Pizzicato
+
+#include "Bass Solo Pizzicato.sfz"
+
+<global>
+sw_default=c6
+sw_lokey=c6
+sw_hikey=g6
+sw_last=g6
+sw_label=Harmonics
+
+#include "Bass Solo Harmonics.sfz"
