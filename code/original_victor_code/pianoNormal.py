@@ -62,15 +62,15 @@ pygame.mixer.set_num_channels(16)
 
 # Chargement des sons
 note_wav_map = {
-    60: pygame.mixer.Sound("./../sons/samplespianowav/C4.wav"),   # C4
-    61: pygame.mixer.Sound("./../sons/samplespianowav/Db4.wav"),  # C#4 / Db4
-    62: pygame.mixer.Sound("./../sons/samplespianowav/D4.wav"),   # D4
-    63: pygame.mixer.Sound("./../sons/samplespianowav/Eb4.wav"),  # D#4 / Eb4
-    64: pygame.mixer.Sound("./../sons/samplespianowav/E4.wav"),   # E4
-    65: pygame.mixer.Sound("./../sons/samplespianowav/F4.wav"),   # F4
-    66: pygame.mixer.Sound("./../sons/samplespianowav/Gb4.wav"),  # F#4 / Gb4
-    67: pygame.mixer.Sound("./../sons/samplespianowav/G4.wav"),   # G4
-    68: pygame.mixer.Sound("./../sons/samplespianowav/Ab4.wav")   # G#4 / Ab4
+    60: pygame.mixer.Sound("./../../sons/samplespianowav/C4.wav"),   # C4
+    61: pygame.mixer.Sound("./../../sons/samplespianowav/Db4.wav"),  # C#4 / Db4
+    62: pygame.mixer.Sound("./../../sons/samplespianowav/D4.wav"),   # D4
+    63: pygame.mixer.Sound("./../../sons/samplespianowav/Eb4.wav"),  # D#4 / Eb4
+    64: pygame.mixer.Sound("./../../sons/samplespianowav/E4.wav"),   # E4
+    65: pygame.mixer.Sound("./../../sons/samplespianowav/F4.wav"),   # F4
+    66: pygame.mixer.Sound("./../../sons/samplespianowav/Gb4.wav"),  # F#4 / Gb4
+    67: pygame.mixer.Sound("./../../sons/samplespianowav/G4.wav"),   # G4
+    68: pygame.mixer.Sound("./../../sons/samplespianowav/Ab4.wav")   # G#4 / Ab4
 }
 
 
