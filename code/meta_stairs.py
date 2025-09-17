@@ -59,6 +59,10 @@ def handle_keyboard_input(keyName):
     elif keyName in [ 'right', 'up' ]:
         orchestrator.nextSubmode()
     elif keyName in orchestrator.getModeKeys():
+        port = orchestrator.getCurrentPort()
+        channel = orchestrator.getCurrentModeChannel()
+        allNotesOff = mido.Message('control_change', control=123, channel=channel)
+        outputPorts[port].send(allNotesOff)
         orchestrator.setMode(keyName)
     else:
         return
@@ -75,13 +79,16 @@ gui.init()
 
 # MIDI callback #################################
 def midiInputCallback(msg):
+    # print(msg)
     if msg.type == 'note_on' or msg.type == 'note_off':
         # print('midi callback triggered by {0} event'.format(msg.type))
         (port, msgs) = orchestrator.process(msg)
-        # print(port)
-        # print(msgs)
         for m in msgs:
             outputPorts[port].send(m)
+    elif msg.type == 'control_change':
+        port = orchestrator.getCurrentPort()
+        # print(f'sending cc message to port {port}')
+        outputPorts[port].send(msg)
 
 # open ports ####################################
 try:

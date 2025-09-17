@@ -2,7 +2,7 @@ import mido
 from . import base_mode
 
 class Shepard(base_mode.BaseMode):
-    def __init__(self):
+    def __init__(self, channel):
         submodes = [
             base_mode.BaseMode.Submode(
                 name = 'montant',
@@ -13,7 +13,7 @@ class Shepard(base_mode.BaseMode):
                 data = { 'increment': -1 }
             ),
         ]
-        super().__init__('shepard', submodes)
+        super().__init__('shepard', submodes, channel)
 
         self._pitch_classes = list(range(12)) # From C (0) to B (11)
         self._shepard_groups = []
@@ -64,7 +64,7 @@ class Shepard(base_mode.BaseMode):
                     'note_on',
                     note = n,
                     velocity = int(self._shepard_volume(n) * 64),
-                    channel = 0
+                    channel = self._channel
                 ))
 
         return msgs

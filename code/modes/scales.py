@@ -1,7 +1,7 @@
 from . import base_mode
 
 class Scales(base_mode.BaseMode):
-    def __init__(self):
+    def __init__(self, channel):
         submodes = [
             base_mode.BaseMode.Submode(
                 name = 'diatonique',
@@ -25,7 +25,7 @@ class Scales(base_mode.BaseMode):
                 }
             ),
         ]
-        super().__init__('gammes', submodes)
+        super().__init__('gammes', submodes, channel)
 
         self.nextSubmode()
 

@@ -2,8 +2,8 @@ import random
 from . import base_mode
 
 class Tonnetz(base_mode.BaseMode):
-    def __init__(self):
-        super().__init__('tonnetz')
+    def __init__(self, channel):
+        super().__init__('tonnetz', [], channel)
         random.seed()
 
         self._counter = 0
@@ -23,6 +23,15 @@ class Tonnetz(base_mode.BaseMode):
 
         self._previousTransition = 'p'
         self._noteArray = self._makeNoteArray()
+    
+        chunkSize = len(self._noteArray) // 9
+        # print(f'noteArray length : {len(self._noteArray)}')
+        # print(f'chunkSize : {chunkSize}')
+        # remainder = len(self._noteArray) % 9
+        self._chunks = []
+        for i in range(8):
+            self._chunks.append([ i * chunkSize, (i + 1) * chunkSize])
+        self._chunks.append([ 8 * chunkSize, len(self._noteArray)])
 
     def _makeNoteArray(self):
         pattern = self._patterns[0]
@@ -61,8 +70,12 @@ class Tonnetz(base_mode.BaseMode):
         self._previousTransition = t
         self._noteArray = self._makeNoteArray()
          
-    def _getRandomNote(self):
-        return self._noteArray[random.randrange(len(self._noteArray) - 1)]
+    def _getRandomNote(self, chunk = -1):
+        if chunk in range(9):
+            min, max = self._chunks[chunk]
+            # print(min, max)
+            return self._noteArray[random.randrange(min, max)]
+        return self._noteArray[random.choice(self._noteArray)]
 
     def process(self, msg):
         msgs = []
@@ -70,7 +83,9 @@ class Tonnetz(base_mode.BaseMode):
             if self._counter >= self._maxCounter:
                 self._counter = 0
                 self._transition(self._transitions[random.randrange(len(self._transitions) - 1)])
-            msg.note = self._getRandomNote()
+            note_in = msg.note
+            msg.note = self._getRandomNote(note_in - self._minNoteIn)
+            msg.channel = self._channel
             self._counter += 1
             msgs = [ msg ]
         return msgs

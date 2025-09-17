@@ -4,9 +4,10 @@ class BaseMode:
             self.name = name
             self.data = data
 
-    def __init__(self, name = 'None', submodes = []):
+    def __init__(self, name = 'None', submodes = [], channel = 0):
         self._name = name
         self._submodes = submodes
+        self._channel = channel
         self._currentSubmode = None
         self._currentSubmodeIndex = -1
         self._minNoteIn = 1

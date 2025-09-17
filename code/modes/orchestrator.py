@@ -15,11 +15,11 @@ Current submode : {submode}
 """
 
 modes = {
-  'g': scales.Scales(),
-  's': shepard.Shepard(),
+  'g': scales.Scales(0),
+  's': shepard.Shepard(1),
   # 'f': midifile,
-  'a': random.Random(),
-  't': tonnetz.Tonnetz(),
+  'a': random.Random(2),
+  't': tonnetz.Tonnetz(2),
 }
 
 def getModeKeys():
@@ -28,6 +28,7 @@ def getModeKeys():
     return res
 
 outputPort = 'main'
+currentMode = None
 
 def setMode(keyName):
     global currentMode
@@ -42,6 +43,14 @@ def setMode(keyName):
     elif keyName == 'i': # meta impro
         outputPort = 'aux2'
         currentMode = 'meta impro'
+
+def getCurrentPort():
+    return outputPort
+
+def getCurrentModeChannel():
+    if currentModeIsMode():
+        return currentMode._channel
+    return 0
 
 def currentModeIsMode():
     return isinstance(currentMode, base_mode.BaseMode)
