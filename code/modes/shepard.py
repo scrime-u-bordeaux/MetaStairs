@@ -63,7 +63,7 @@ class Shepard(base_mode.BaseMode):
                 msgs.append(mido.Message(
                     'note_on',
                     note = n,
-                    velocity = int(self._shepard_volume(n) * 64),
+                    velocity = int(self._shepard_volume(n) * msg.velocity),
                     channel = self._channel
                 ))
 

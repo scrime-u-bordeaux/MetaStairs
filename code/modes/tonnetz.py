@@ -19,6 +19,7 @@ class Tonnetz(base_mode.BaseMode):
             'p', # parallel, picarde
             'r', # relative
             'l', # leittonwechsel, leading tone exchange
+            'minus1', # -1 halftone transposition
         ]
 
         self._previousTransition = 'p'
@@ -61,6 +62,8 @@ class Tonnetz(base_mode.BaseMode):
         elif t == 'l':
             if self._major: offset = 4
             else: offset = 8
+        elif t == 'minus1':
+            offset = 11
         else:
             return
 
