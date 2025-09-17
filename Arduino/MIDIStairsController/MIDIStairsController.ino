@@ -1,11 +1,13 @@
-#include "PressureToNoteEvents.h"
-
 #define NB_OF_KEYS 9
 #define MIDI_OUT_CHANNEL 1
+// #define DEBUG 1
+
+#include "PressureToNoteEvents.h"
 
 struct noteGenData {
   uint8_t analogInput;
   uint8_t note;
+  float processed = 0.f;
 };
 
 noteGenData noteGeneratorsData[NB_OF_KEYS] = {
@@ -33,30 +35,48 @@ class MidiNotesSender : public PressureToNoteEvents::Listener {
 
 MidiNotesSender midiNotesSender;
 PressureToNoteEvents* noteGenerators[NB_OF_KEYS];
+bool calibrating = true;
+uint64_t startDate = millis();
 
 void setup() {
+#ifdef DEBUG
   Serial.begin(115200);
+#endif
+
   for (auto i = 0; i < NB_OF_KEYS; ++i) {
     noteGenerators[i] = new PressureToNoteEvents(noteGeneratorsData[i].note);
+    noteGenerators[i]->setCalibrating(true);
     noteGenerators[i]->setListener(&midiNotesSender);
   }
 
   digitalWrite(13, HIGH); // set the LED on
+
+  startDate = millis();
 }
 
 void loop() {
-  // fix display bounds to [0,1]
-  // Serial.print(",0,1");
-  // Serial.println();
+  if (calibrating && startDate - millis() > 3000) {
+    calibrating = false;
+    for (auto gen : noteGenerators) {
+      gen->setCalibrating(false);
+      Serial.println(gen->minValue);
+    }
+    Serial.println("stop calibrating");
+  }
 
   float value;
   for (auto i = 0; i < NB_OF_KEYS; ++i) {
     value = analogRead(noteGeneratorsData[i].analogInput) / 1024.f;
-    // if (i == 0) {
-    //   Serial.println(value);
-    // }
-    noteGenerators[i]->process(value);
+    noteGeneratorsData[i].processed = noteGenerators[i]->process(value);
   }
+  
+#ifdef DEBUG
+  for (const auto data& : noteGeneratorsData) {
+    Serial.print(data.processed);
+    Serial.print(",");
+  }
+  Serial.println("0,1");
+#endif
 
   while (usbMIDI.read()) {
     // manage modes here according to MIDI input,
