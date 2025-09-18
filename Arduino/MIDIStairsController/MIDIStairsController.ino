@@ -71,7 +71,7 @@ void loop() {
   }
   
 #ifdef DEBUG
-  for (const auto data& : noteGeneratorsData) {
+  for (const auto& data : noteGeneratorsData) {
     Serial.print(data.processed);
     Serial.print(",");
   }

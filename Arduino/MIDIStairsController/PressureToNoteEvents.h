@@ -41,7 +41,7 @@ private:
 public:
   PressureToNoteEvents(uint8_t n = 0) :
     note(n), prevValue(0), prevDeltaValue(0), peakDeltaValue(0),
-    lowThresh(0.4), highThresh(0.6), on(false),
+    lowThresh(0.7), highThresh(0.8), on(false),
     calibrating(false), minValue(0)
   {
     filter.setCutoffFrequency(50);
