@@ -19,6 +19,9 @@ defaultOutputPortName3 = None
 inputPortsList = mido.get_input_names()
 outputPortsList = mido.get_output_names()
 
+def input_notes_mapping(notein):
+    return 10 - notein
+
 # prompt user if no default ports ###############
 inputPortName = userInput.promptWithDefaultValue(
     defaultInputPortName,
@@ -81,6 +84,7 @@ gui.init()
 def midiInputCallback(msg):
     # print(msg)
     if msg.type == 'note_on' or msg.type == 'note_off':
+        msg.note = input_notes_mapping(msg.note)
         # print('midi callback triggered by {0} event'.format(msg.type))
         (port, msgs) = orchestrator.process(msg)
         for m in msgs:
