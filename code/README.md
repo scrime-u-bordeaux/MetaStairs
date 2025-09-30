@@ -12,7 +12,7 @@ NB : you might need to replace `python` with `python3` in the below commands as 
 * install requirements : `python -m pip install -r requirements.txt`
 * start script : `python meta_stairs.py`
 
-## usage 
+## usage
 
 When the script starts, it will prompt you to select various MIDI inputs and outputs.  
 On mac, we used several IAC busses (you create more than the default one from the *Audio and MIDI configuration* app).  
