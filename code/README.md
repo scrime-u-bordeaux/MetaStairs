@@ -27,7 +27,8 @@ Once the MIDI inputs and outputs have been selected, a window opens and allows t
 
 ![pygame ui](../pics/python-script-ui.png)
 
-Each mode can be selected by a letter shortcut (see picture above), and one can navigate through submodes of the currently selected mode using the arrow keys :
+Each mode can be selected by a letter shortcut and one can navigate through submodes of the currently selected mode using the arrow keys :
+
 * gammes (g) : with this mode each step has a fixed note assigned, it's similar to a regular keyboard but submodes define various scales :
     * diatonique (all steps are white piano keys)
     * chromatique (consecutive steps are spaced by a semitone)
@@ -40,6 +41,8 @@ Each mode can be selected by a letter shortcut (see picture above), and one can 
 * midifile performer (m) : this mode is delegated to an external process, see below
 * meta impro (i) : this mode is also delegated to an external process, see below
 
-The `midifile performer` mode is operated by a web app that can be accessed [here](https://scrime-apps.labri.fr/web-midifile-performer-dev). It should be run on Chrome for MIDI support. You can also [clone](https://github.com/scrime-u-bordeaux/web-midifile-performer) it and use the `develop` branch locally.  
+Modes are responsible for defining the MIDI channels on which they sends their messages (they are actually all hardcoded in `modes/orchestrator.py`), which will target specific virtual instruments in the reaper project. For instance, all modes will send messages on channel 1 by default and will be played by a virtual piano, except modes shepard (channel 2, played by a marimba), tonnetz (channel 3, played by a celesta), and the meta impro program (channel 4, played by a rhodes-like electric piano).
 
-The `meta impro`mode is operated by an experimental variant of the `midifile performer` web app that provides several improvisation modes. It is a python program that should be executed locally. A specific branch (`nuit-des-escaliers`) was created for this project and the code is available [here](https://github.com/scrime-u-bordeaux/metaImpro). The MIDI channel is hardcoded so you have to modify it from the source if you want to change it.
+The `midifile performer` mode is operated by a web app that can be accessed [here](https://scrime-apps.labri.fr/web-midifile-performer-dev). It should be run on Chrome for MIDI support. You can also [clone](https://github.com/scrime-u-bordeaux/web-midifile-performer) it and use the `develop` branch locally. For the moment the app is not able to remap the original MIDI channels from the loaded files to user defined ones, but we used piano scores encoded with messages on channel 1 (in our case, this targeted the virtual piano in reaper so it was ok).
+
+The `meta impro` mode is operated by an experimental variant of the `midifile performer` web app that provides several improvisation modes. It is a python program that should be executed locally. A specific branch (`nuit-des-escaliers`) was created for this project and the code is available [here](https://github.com/scrime-u-bordeaux/metaImpro). The MIDI channel is hardcoded so you have to modify it from the source if you want to change it.
