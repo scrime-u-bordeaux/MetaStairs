@@ -1,6 +1,6 @@
-# MIDI Stairs engine
+# MetaStairs engine
 
-A multi-mode MIDI note events processor for the MIDI Stairs project
+A multi-mode MIDI note events processor for the MetaStairs project
 
 ## installation
 
