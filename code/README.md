@@ -37,7 +37,7 @@ Each mode can be selected by a letter shortcut and one can navigate through its 
     * montant : on each new step, the next shepard note is the next upper semitone
     * descendant : on each new step, the next shepard note is the next lower semitone
 * aléatoire (a) : no submode, on each new step a random note from the 88 key piano ambitus is played (this one is trivial and we didn't really use it)
-* tonnetz (t) : no submode, every 12 steps a new scale is generated from a triad obtained via random tonnetz navigation and spread across all the piano octaves. Each step randomly plays a note from a subset of all possible notes, depending on its position (lower steps play lower notes and higher step play heigher notes). With 9 steps, each step usually has a choice of 2 notes, whatever triad is active.
+* tonnetz (t) : no submode, every NOTE ON events a new scale is generated from a triad obtained via random tonnetz navigation and spread across all the piano octaves. Each step randomly plays a note from a subset of all possible notes, depending on its position (lower steps play lower notes and higher step play heigher notes). With 9 steps, each step usually has a choice of 2 notes, whatever triad is active.
 * midifile performer (m) : this mode is delegated to an external process, see below
 * meta impro (i) : this mode is also delegated to an external process, see below
 
