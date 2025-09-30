@@ -27,7 +27,7 @@ Once the MIDI inputs and outputs have been selected, a window opens and allows t
 
 ![pygame ui](../pics/python-script-ui.png)
 
-Each mode can be selected by a letter shortcut and one can navigate through submodes of the currently selected mode using the arrow keys :
+Each mode can be selected by a letter shortcut and one can navigate through its submodes using the arrow keys :
 
 * gammes (g) : with this mode each step has a fixed note assigned, it's similar to a regular keyboard but submodes define various scales :
     * diatonique (all steps are white piano keys)
