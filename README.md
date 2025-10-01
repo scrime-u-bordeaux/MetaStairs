@@ -4,6 +4,6 @@ A project designed for the *Nuit des Escaliers 2025* event, organized by the *Op
 
 This repository contains :
 * [The MIDI controller's firmware](./Arduino) that we wrote to turn stairs into a giant MIDI controller keyboard.
-* [A python program](./code) reacting to incoming MIDI messages from the controller according to different operating modes.
-* A reaper project receiving the MIDI messages processed by the python script and playing the notes with various VST plugins according to the current operating mode.
+* [A python program](./Python) reacting to incoming MIDI messages from the controller according to different operating modes.
+* A Reaper project receiving the MIDI messages processed by the python script and playing the notes with various VST plugins according to the current operating mode.
 
