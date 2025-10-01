@@ -1,9 +1,9 @@
 # MetaStairs (Metapiano + Pianostairs)
 
-Un projet réalisé pour la Nuit des Escaliers 2025 (un évènement organisé par l'Opéra de Bordeaux dans le cadre des Journées du Patrimoine 2025) et présenté au Pôle Juridique et Judiciaire de l'Université de Bordeaux place Pey-Berland
+A project designed for the *Nuit des Escaliers 2025* event, organized by the *Opéra de Bordeaux* in the framework of the *Journées du Patrimoine 2025* and presented to the public at the *Pôle Juridique et Judidiaire* of the University of Bordeaux.
 
-Ce dépôt contient :
-* [Le firmware du contrôleur MIDI](./Arduino) utilisé pour rendre l'escalier interactif.
-* [Un script python](./code) réagissant aux messages MIDI reçus du contrôleur selon différents modes de jeu.
-* Un projet reaper recevant les messages MIDI traités par le script python et générant des sons en fonction du mode de jeu actif.
+This repository contains :
+* [The MIDI controller's firmware](./Arduino) that we wrote to turn stairs into a giant MIDI controller keyboard.
+* [A python program](./code) reacting to incoming MIDI messages from the controller according to different operating modes.
+* A reaper project receiving the MIDI messages processed by the python script and playing the notes with various VST plugins according to the current operating mode.
 

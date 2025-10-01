@@ -15,13 +15,14 @@ NB : you might need to replace `python` with `python3` in the below commands as 
 ## usage
 
 When the script starts, it will prompt you to select various MIDI inputs and outputs.  
-On mac, we used several IAC busses (you create more than the default one from the *Audio and MIDI configuration* app).  
-* If the `MIDI Stairs Controller` is connected via USB, you should select it as the `MIDI input port`, or you can select another device for testing like a regular MIDI keyboard controller.  
-* For the `main MIDI output port`, select e.g IAC Bus 2 on Mac (this is the port we used as input in reaper, but you can adapt the settings if you use a different OS). The `main MIDI output port` is used by the internal modes (all modes except `midifile performer` and `meta impro`).  
-Read on for more information on modes.  
-* The selected `auxiliary MIDI output ports 1 and 2` should also be used as MIDI input ports by the `midifile performer` and `meta impro` external processes, respectively. These processes should then send their MIDI messages to the same port as the selected main MIDI output port (or whatever other port reaper is listening to) so that they can be played by the reaper project.  
+On Mac, we used several IAC busses (you can create more than the default one from the native *Audio and MIDI configuration* app).  
 
 ![initial prompt](../pics/initial-prompt.png)
+
+* If the `MIDI Stairs Controller` is connected via USB, you should select it as the `MIDI input port`, or you can select another device for testing like a regular MIDI keyboard controller.  
+* For the `main MIDI output port`, select e.g IAC Bus 2 on Mac (we used this bus as input port in reaper, but you could use e.g Jack on Linux or rtpMIDI on Windows instead). The `main MIDI output port` is used by the internal modes (all modes except `midifile performer` and `meta impro`).  
+Read on for more information on modes.  
+* The selected `auxiliary MIDI output ports 1 and 2` should be different from the `main MIDI output port` and used as MIDI input ports by the `midifile performer` and `meta impro` external processes, respectively. These processes should then send their MIDI messages to the same port as the selected `main MIDI output port` (or whatever other port reaper is listening to) so that they can be played by the reaper project.  
 
 Once the MIDI inputs and outputs have been selected, a window opens and allows to switch between different modes :
 
